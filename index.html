@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <title> My database</title>
+    <script>
+        function addMovie() {
+            var movieTitle = document.getElementById("inputTitle").value;
+            var movieYear = document.getElementById("inputYear").value;
+            var movieActors = document.getElementById("inputActors").value; 
+
+            if (movieTitle="" || movieYear="" || movieActors=""){
+
+                alert("Musisz wypełnić wszystkie pola ");
+                return;
+            }
+
+
+
+            var li= document.createElement("li")
+            li.innerHTML = "<input type='checkbox'> " + movieTitle + ", " + movieYear + ", " + movieActors;
+            document.getElementById("moviesList").removeChild(checkedBoxes[i].parentNode)
+            document.getElementById("inputTitle").value="";
+            document.getElementById("inputYear").value="";
+            document.getElementById("inputActors").value="";
+          
+        }
+        
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+        </div>
+        <h1>My favorite movies to watch</h1>
+        
+        <h2>Titles</h2>
+        <ul id="MovieList">
+            <li> <input type="checkbox"> The Matrix, 1999, Keanu Reeves</li> 
+            <li> <input type="checkbox"> Kapitan Bomba, 2006, Bartosz Walaszek</li> 
+            <button>Delate selected</button>
+
+
+        </ul>
+
+        
+        
+        <h3>Add Movies</h3>
+        Title: <input id= "inputTitle" type="text"><br>
+        Year: <input id= "inputYear" type="text"><br>
+        Actors: <input id= "inputActors" type="text"><br>       
+        <button onclick="addMovie()">Add</button>
+
+
+
+
+
+    </header>
+    <main>
+        <div class="container">
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <hr>
+            &copy; My movie database. All rights reserved.
+            <p>Author: <i>Jan Ślusarek</i></p>
+        </div>
+    </footer>
+</body>
+</html>
